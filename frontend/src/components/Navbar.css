@@ -1,0 +1,95 @@
+.navbar {
+  /* Glassmorphism */
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 100px;
+  box-shadow: var(--shadow-lg);
+  
+  /* Layout */
+  padding: 12px 24px;
+  width: max-content;
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  
+  /* Animation */
+  transition: all var(--transition-normal);
+}
+
+.navbar:hover {
+  background: var(--bg-glass-hover);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6),
+              0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar-links a,
+.navbar-links button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 100px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+}
+
+/* Internal icon sizing */
+.navbar-links svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+  transition: stroke var(--transition-fast), transform var(--transition-fast);
+}
+
+.navbar-links a:hover,
+.navbar-links button:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-links a:hover svg,
+.navbar-links button:hover svg {
+  stroke: var(--accent-primary);
+  transform: scale(1.1);
+}
+
+/* Specific styling for the logout button to look a bit different on hover */
+.navbar-links button.logout-button:hover {
+  background: rgba(236, 72, 153, 0.1);
+}
+
+.navbar-links button.logout-button:hover svg {
+  stroke: var(--accent-secondary);
+}
+
+.fontstyle {
+  font-family: var(--font-sans);
+}
+
+.inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

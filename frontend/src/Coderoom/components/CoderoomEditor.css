@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.editor-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.CodeMirror {
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  font-family: var(--font-mono);
+  background-color: transparent !important;
+  color: var(--text-primary);
+  padding-left: 12px ;
+  line-height: 1.6;
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+.CodeMirror-scroll {
+  overflow: auto !important;
+}
+
+/* Syntax highlighting */
+.cm-keyword { color: #ff79c6; }
+.cm-atom { color: #bd93f9; }
+.cm-number { color: #f1fa8c; }
+.cm-def { color: #50fa7b; }
+.cm-variable { color: #8be9fd; }
+.cm-variable-2 { color: var(--text-primary); }
+.cm-variable-3 { color: #ffb86c; }
+.cm-property { color: #66d9ef; }
+.cm-operator { color: #ff79c6; }
+.cm-comment { color: #6272a4; font-style: italic; }
+.cm-string { color: #f1fa8c; }
+.cm-string-2 { color: #f1fa8c; }
+.cm-builtin { color: #8be9fd; }
+.cm-meta { color: var(--text-primary); }
+.cm-tag { color: #ff79c6; }
+.cm-attribute { color: #50fa7b; }
+.cm-qualifier { color: #ffb86c; }
+.cm-error { color: #f55; }
+
+/* Line number area */
+.CodeMirror-gutters {
+  background-color: transparent !important;
+  color: var(--text-muted);
+  border: none;
+}
+
+/* Highlight selection */
+.CodeMirror-selected {
+  background-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Cursor */
+.CodeMirror-cursor {
+  border-left: 2px solid var(--accent-primary) !important;
+}
+
+/* Bracket matching */
+.CodeMirror-matchingbracket {
+  background-color: rgba(236, 72, 153, 0.3);
+  color: #fff;
+  font-weight: bold;
+}
